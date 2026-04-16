@@ -1,0 +1,146 @@
+{
+  "theme": {
+    "archetype": "Archetype 1 (Organic & Earthy) mixed with Archetype 4 (Swiss Boldness)",
+    "mode": "Light",
+    "description": "Bold & creative yet warm & approachable. Balances warm earthy tones (Terracotta/Sand) with confident cool tones (Deep Slate/Steel Blue) to reflect 'Empathy + Intelligence'. Uses editorial serif typography to convey authority and modern sans-serif for clarity."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "sizes": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl",
+      "h2": "text-4xl sm:text-5xl",
+      "h3": "text-2xl sm:text-3xl",
+      "h4": "text-xl",
+      "body": "text-base lg:text-lg",
+      "small": "text-sm",
+      "overline": "text-xs uppercase tracking-[0.2em]"
+    },
+    "rules": {
+      "headings_spacing": "tracking-tight",
+      "line_height_headings": "leading-none",
+      "line_height_body": "leading-relaxed"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#FDFBF7",
+      "secondary": "#F3EFE7",
+      "tertiary": "#0D1321"
+    },
+    "text": {
+      "primary": "#0D1321",
+      "secondary": "#3E5C76",
+      "inverse": "#FDFBF7"
+    },
+    "accents": {
+      "primary": "#C8553D",
+      "primary_hover": "#A64430",
+      "secondary": "#3E5C76",
+      "secondary_hover": "#2B4155"
+    },
+    "borders": "#D9D2C5"
+  },
+  "layout": {
+    "spacing_scale": "Use generous padding: p-6, p-12, py-24, py-32 for section breathing room.",
+    "grid_system": "Mode A: The Tetris Grid. Asymmetric bento grids for features. Avoid generic 50/50 splits without visual offset.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "borders": "sharp edges or minimal rounding (rounded-md max) to maintain a mature, editorial look. No overly bubbly shapes."
+  },
+  "components": {
+    "header": {
+      "style": "Crystal Glassmorphism",
+      "classes": "sticky top-0 z-50 backdrop-blur-xl bg-[#FDFBF7]/70 border-b border-[#0D1321]/10",
+      "rules": "Must have visible navigation links on desktop. No hamburger menu on desktop."
+    },
+    "buttons": {
+      "primary": "bg-[#C8553D] text-[#FDFBF7] rounded-none px-8 py-4 font-semibold transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-[#A64430]",
+      "secondary": "bg-transparent border border-[#0D1321] text-[#0D1321] rounded-none px-8 py-4 font-semibold transition-all hover:bg-[#0D1321] hover:text-[#FDFBF7]"
+    },
+    "cards": {
+      "style": "Flat Solid + Minimal Border",
+      "classes": "bg-[#F3EFE7] border border-[#D9D2C5] p-8",
+      "hover": "hover:-translate-y-1 transition-transform duration-300"
+    },
+    "forms": {
+      "style": "Use Shadcn customized components. Inputs should have bg-transparent, border-b only (material-style) or sharp square borders focus:ring-[#C8553D]."
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-300 ease-in-out",
+    "hover_states": "Buttons and cards lift up (-translate-y-1). Image containers apply slight scale (scale-105) on inner image.",
+    "page_load": "Fade up text staggers. Use Framer Motion for section entrances."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1551731409-43eb3e517a1a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjB3b21hbiUyMGtleW5vdGUlMjBzcGVha2VyJTIwc3RhZ2V8ZW58MHx8fHwxNzc2MzE1MjU4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "hero",
+      "description": "Professional woman holding a microphone, used as the main hero image representing Shivani."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1774437668232-df347c3873ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjB3b21hbiUyMGtleW5vdGUlMjBzcGVha2VyJTIwc3RhZ2V8ZW58MHx8fHwxNzc2MzE1MjU4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "speaking_engagements",
+      "description": "Woman in colorful sari speaking, showcasing authentic self and diverse leadership on stage."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMG1lbnRvcmluZ3xlbnwwfHx8fDE3NzYzMTUyNzF8MA&ixlib=rb-4.1.0&q=85",
+      "category": "mentoring",
+      "description": "Woman gesturing while talking to two people, representing 1-on-1 and team mentoring workshops."
+    },
+    {
+      "url": "https://images.pexels.com/photos/25037026/pexels-photo-25037026.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "background_texture_quote",
+      "description": "Vibrant warm orange abstract art canvas with textured layers. Use as background for the 'Quote / Testimonials' section with dark text overlay."
+    }
+  ],
+  "page_sections": [
+    {
+      "name": "Hero",
+      "content": "Name (Shivani Verma), Tagline (Leadership Consultant & Keynote Speaker), Photo.",
+      "layout": "Asymmetric split. Left: Massive serif H1. Right: Image masking or overlapping offset container."
+    },
+    {
+      "name": "My Message",
+      "content": "Personal story about leadership.",
+      "layout": "Editorial text block with extreme negative space. Include a large typographic pull-quote."
+    },
+    {
+      "name": "Background",
+      "content": "Career journey (telecom, healthcare, finance).",
+      "layout": "Bento Grid (Mode A) or visual timeline showing distinct career phases."
+    },
+    {
+      "name": "Speaking Engagements",
+      "content": "Topics ('How to get a seat...', 'Authentic self').",
+      "layout": "Cards with hover preview images. Sharp borders."
+    },
+    {
+      "name": "Mentoring & Training",
+      "content": "Individual and team workshops.",
+      "layout": "Split layout bridging visual imagery and bulleted outcomes."
+    },
+    {
+      "name": "Quote / Testimonial",
+      "content": "Empathy + Intelligence: Carving Your Seat...",
+      "layout": "Full width banner using the 'background_texture_quote' image with highly readable, massive overlay text."
+    },
+    {
+      "name": "Contact",
+      "content": "Simple contact form + 'Book a Call' CTA.",
+      "layout": "Clean Shadcn form on a dark tertiary background (#0D1321) with inverse text to create a dramatic anchor for the page footer."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Use standard HTML tags (div, section, span) with Tailwind for complex/overlapping layouts, and Shadcn components for interactive logic (forms, inputs).",
+    "Never center text by default. Emphasize asymmetric balance and strong left-alignments.",
+    "Do NOT use pure Inter or standard generic sans-serif for headings. Stick to Playfair Display for headings and Manrope for body text.",
+    "Implement fluid typography for headings. Ensure max scaling prevents H1s from breaking viewport bounds.",
+    "All interactive elements (buttons, inputs, links) MUST have data-testid attributes (e.g., data-testid='hero-book-call-btn').",
+    "Apply generous padding (p-12, py-24, gap-12). Leave empty columns in grids to create 'breathing room' and artistic tension.",
+    "Images must not exceed 80vh on mobile devices to prevent excessive scrolling.",
+    "Use the provided image_urls. Do NOT use placeholder domains like via.placeholder.com."
+  ]
+}
