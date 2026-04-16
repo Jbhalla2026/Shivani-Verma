@@ -41,7 +41,7 @@ export default function Contact() {
           {/* Left side info */}
           <div className="lg:col-span-5 reveal">
             <p className="text-xs uppercase tracking-[0.25em] text-[#C8553D] font-semibold mb-2">
-              05
+              06
             </p>
             <h2
               data-testid="contact-title"
@@ -68,6 +68,10 @@ export default function Contact() {
               </a>
 
               <div className="space-y-3 text-[#D9D2C5]">
+                <p className="text-sm">
+                  <span className="text-[#C8553D] font-semibold">Email:</span>{" "}
+                  <a href="mailto:shiviee@gmail.com" className="hover:text-[#C8553D] transition-colors" data-testid="contact-email-link">shiviee@gmail.com</a>
+                </p>
                 <p className="text-sm">
                   <span className="text-[#C8553D] font-semibold">Location:</span>{" "}
                   Vancouver, British Columbia

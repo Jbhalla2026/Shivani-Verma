@@ -6,6 +6,7 @@ import Message from "@/components/Message";
 import Background from "@/components/Background";
 import Speaking from "@/components/Speaking";
 import Mentoring from "@/components/Mentoring";
+import MediaPress from "@/components/MediaPress";
 import Quote from "@/components/Quote";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -35,6 +36,7 @@ function App() {
       <Background />
       <Speaking />
       <Mentoring />
+      <MediaPress />
       <Quote />
       <Contact />
       <Footer />

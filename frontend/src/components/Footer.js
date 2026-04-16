@@ -29,7 +29,7 @@ export default function Footer() {
               <Linkedin size={16} />
             </a>
             <a
-              href="mailto:hello@shivaniverma.me"
+              href="mailto:shiviee@gmail.com"
               data-testid="footer-email"
               className="w-10 h-10 border border-[#3E5C76] flex items-center justify-center text-[#D9D2C5] hover:bg-[#C8553D] hover:border-[#C8553D] hover:text-[#FDFBF7] transition-all"
             >
