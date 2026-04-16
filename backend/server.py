@@ -37,10 +37,10 @@ class ContactMessage(BaseModel):
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class ContactMessageCreate(BaseModel):
-    name: str
-    email: str
+    name: str = Field(..., min_length=1)
+    email: str = Field(..., min_length=1)
     subject: str = ""
-    message: str
+    message: str = Field(..., min_length=1)
 
 
 # Routes
