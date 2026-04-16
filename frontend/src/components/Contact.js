@@ -1,9 +1,5 @@
 import { useState } from "react";
 import { Send, Calendar, CheckCircle, AlertCircle } from "lucide-react";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -19,9 +15,23 @@ export default function Contact() {
     setLoading(true);
     setStatus(null);
     try {
-      await axios.post(`${API}/contact`, form);
-      setStatus("success");
-      setForm({ name: "", email: "", subject: "", message: "" });
+      const formData = new FormData();
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("subject", form.subject);
+      formData.append("message", form.message);
+
+      const res = await fetch("/contact.php", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     } finally {
