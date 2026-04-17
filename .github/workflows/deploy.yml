@@ -1,0 +1,61 @@
+Step 1: Enable GitHub Pages with Actions
+
+Go to https://github.com/Jbhalla2026/Shivani-Verma/settings/pages
+Under Source, change from "Deploy from a branch" to "GitHub Actions"
+Click Save
+Step 2: Add the deploy workflow
+
+Go to https://github.com/Jbhalla2026/Shivani-Verma
+Click "Add file" → "Create new file"
+In the filename box, type: .github/workflows/deploy.yml
+Paste this exact content:
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
+          cache-dependency-path: frontend/yarn.lock
+
+      - name: Install dependencies
+        run: cd frontend && yarn install --frozen-lockfile
+
+      - name: Build
+        run: cd frontend && GENERATE_SOURCEMAP=false yarn build
+        env:
+          REACT_APP_BACKEND_URL: ""
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/build
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
