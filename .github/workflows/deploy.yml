@@ -1,12 +1,3 @@
-Go to https://github.com/Jbhalla2026/Shivani-Verma/settings/pages
-Under Source, change from "Deploy from a branch" to "GitHub Actions"
-Click Save
-Step 2: Add the deploy workflow
-
-Go to https://github.com/Jbhalla2026/Shivani-Verma
-Click "Add file" → "Create new file"
-In the filename box, type: .github/workflows/deploy.yml
-Paste this exact content:
 name: Deploy to GitHub Pages
 
 on:
