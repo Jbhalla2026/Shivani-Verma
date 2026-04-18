@@ -27,8 +27,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: cd frontend && yarn install
+      - name: Remove private packages and install
+        run: |
+          cd frontend
+          sed -i '/@emergentbase/d' package.json
+          yarn install
 
       - name: Build
         run: cd frontend && GENERATE_SOURCEMAP=false yarn build
@@ -42,7 +45,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/build
-
+          
+           - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
